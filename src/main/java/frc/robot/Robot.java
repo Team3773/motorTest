@@ -4,21 +4,22 @@
 
 package frc.robot;
 
-// import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.PWMVictorSPX;
-import edu.wpi.first.wpilibj.SpeedController;
+//import edu.wpi.first.wpilibj.Joystick;
+//import edu.wpi.first.wpilibj.PWMVictorSPX;
+//import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.TimedRobot;
+import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
 public class Robot extends TimedRobot {
+  WPI_VictorSPX motor;
   private static final int motorPort = 1;
   // private static final int joystickPort = 0;
 
-  private SpeedController motor;
   // private Joystick joystick;
 
   @Override
   public void robotInit() {
-    motor = new PWMVictorSPX(motorPort);
+    motor = new WPI_VictorSPX(motorPort);
     // joystick = new Joystick(joystickPort);
   }
 
